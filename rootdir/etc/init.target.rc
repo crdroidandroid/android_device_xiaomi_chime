@@ -87,6 +87,11 @@ on early-boot
     start vendor.sensors
 
 on boot
+# IRQ tuning from Razer Phone 2 
+    # msm_drm
+    write /proc/irq/7/smp_affinity_list 2
+    # kgsl-3d0
+    write /proc/irq/489/smp_affinity_list 1
 # wuzhisen change Define cpu set for audio app. This is to optimize
 # audio scheduling against lpm exit latencies
     write /dev/cpuset/audio-app/cpus 1-2

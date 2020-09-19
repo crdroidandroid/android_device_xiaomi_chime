@@ -23,6 +23,7 @@ drm.service.enabled=true
 
 # Graphics
 debug.hwui.renderer=skiagl
+debug.sf.enable_hwc_vds=0
 debug.sf.hw=1
 debug.sf.latch_unsignaled=0
 debug.sf.disable_backpressure=1

@@ -71,12 +71,38 @@ void vendor_load_properties() {
         auto prop_name = "ro.product." + source + prop;
         property_override(prop_name.c_str(), value.c_str(), false);
     };
+    
+    property_override("ro.build.fingerprint", "xiaomi/lime_global/lime:10/QKQ1.200830.002/V12.0.3.0.QJFMIXM:user/release-keys");
+    property_override("ro.build.description", "lime-user 10 QKQ1.200830.002 V12.0.3.0.QJFMIXM release-keys");
+   
+    std::string region = GetProperty("ro.boot.hwc", "");
+    std::string hwname = GetProperty("ro.boot.product.hardware.sku", "");
 
-    for (const auto &source : ro_props_default_source_order) {
-        set_ro_build_prop(source, "fingerprint",
-                          "xiaomi/lime_global/lime:10/QKQ1.200830.002/V12.0.3.0.QJFMIXM:user/release-keys");
-        set_ro_product_prop(source, "brand", "Xiaomi");
-        set_ro_product_prop(source, "device", "juice");
-        set_ro_product_prop(source, "model", "POCO M3 / Redmi 9T");
+    if (hwname == "lime") {
+            if (region == "CN" || region =="Japan") {
+                property_override("ro.product.brand", "Redmi");
+                property_override("ro.product.model", "Redmi 9 Power");
+                property_override("ro.product.device", "lime");
+          } if (region == "India") {
+                property_override("ro.product.brand", "Redmi");
+                property_override("ro.product.model", "Redmi Note 9 4G");
+                property_override("ro.product.device", "lime");
+          } if (region == "Global") {
+                property_override("ro.product.brand", "Redmi");
+                property_override("ro.product.model", "Redmi 9T");
+                property_override("ro.product.device", "lime");
+          }     
+    } else if (hwname == "lemon") {
+        property_override("ro.product.brand", "Redmi");
+        property_override("ro.product.model", "Redmi 9T");
+        property_override("ro.product.device", "lemon");
+    } else if (hwname == "citrus") {
+        property_override("ro.product.brand", "POCO");
+        property_override("ro.product.model", "POCO M3");
+        property_override("ro.product.device", "citrus");
+    } else if (hwname == "pomelo") {
+        property_override("ro.product.brand", "Redmi");
+        property_override("ro.product.model", "Redmi 9T");
+        property_override("ro.product.device", "pomelo");
     }
 }

@@ -440,6 +440,10 @@ service panel_color /vendor/bin/panelcolor_bin
 on property:sys.boot_completed=1
     start panel_color
 
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+
 ########### FTM end ##########
 ########### FTM end ##########
 ########### FTM end ##########

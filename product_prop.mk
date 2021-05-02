@@ -16,6 +16,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.egl.hw=0 \
     debug.hwui.renderer=opengl \
     debug.sf.latch_unsignaled=1 \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     debug.sf.disable_backpressure=1 \
     debug.sf.hw=0 \
     ro.surface_flinger.use_color_management=true

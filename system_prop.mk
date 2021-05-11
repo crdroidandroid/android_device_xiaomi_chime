@@ -8,6 +8,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.library_name=libbluetooth_qti.so \
     persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
     vendor.bluetooth.soc=cherokee
+    
+# Charger
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.charger.enable_suspend=true
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \

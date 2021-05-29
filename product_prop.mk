@@ -10,6 +10,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dex2oat
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat64.enabled=true
+    
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
 
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \

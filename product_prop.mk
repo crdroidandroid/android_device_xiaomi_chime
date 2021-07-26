@@ -15,6 +15,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
+
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.egl.hw=0 \

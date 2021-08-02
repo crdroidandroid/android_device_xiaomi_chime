@@ -762,7 +762,7 @@
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>40</item>
+        <item>22</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
@@ -770,7 +770,7 @@
         <item>0</item>
         <item>1</item>
         <item>20</item>
-        <item>21</item>
+        <item>22</item>
     </integer-array>
 
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
@@ -787,8 +787,8 @@
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
         <item>10</item>
-        <item>20</item>
-        <item>30</item>
+        <item>15</item>
+        <item>25</item>
     </integer-array>
 
     <!-- Default list of files pinned by the Pinner Service -->

@@ -32,6 +32,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.am.reschedule_service=true \
     ro.sys.fw.bg_apps_limit=24
 
+# Dex
+PRODUCT_PROPERTY_OVERRIDES += \
+   pm.dexopt.ab-ota=extract \
+   pm.dexopt.install=speed-profile \
+   pm.dexopt.boot=extract \
+   pm.dexopt.first-boot=quicken \
+   dalvik.vm.dex2oat-cpu-set=0,1,5,6 \
+   dalvik.vm.dex2oat-threads=4 \
+   dalvik.vm.dex2oat-filter=quicken \
+   dalvik.vm.image-dex2oat-cpu-set=0,1,5,6 \
+   dalvik.vm.image-dex2oat-filter=quicken \
+   dalvik.vm.image-dex2oat-threads=4 \
+   ro.vendor.qti.am.reschedule_service=true \
+   ro.sys.fw.dex2oat_thread_count=8 \
+   dalvik.vm.boot-dex2oat-threads=8 \
+   dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+
 # Netflix custom property
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.netflix.bsp_rev=Q6115-31409-1

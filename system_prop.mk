@@ -6,6 +6,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.btstack.enable.twsplus=true \
     persist.vendor.btstack.enable.twsplussho=true \
     ro.bluetooth.library_name=libbluetooth_qti.so \
+    persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
     vendor.bluetooth.soc=cherokee
 
 # IMS

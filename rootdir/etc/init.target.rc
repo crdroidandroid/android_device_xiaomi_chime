@@ -474,5 +474,10 @@ on property:sys.boot_completed=1
     stop boot_log
     stop boot_log_crash
     stop boot_log_kernel
+    
 # Force disable hw overlays to be true
     exec - root -- /system/bin/sh -c "service call SurfaceFlinger 1008 i32 1"
+    
+# Touchpanel
+    chown system system /sys/touchpanel/double_tap
+    chmod 0660 /sys/touchpanel/double_tap

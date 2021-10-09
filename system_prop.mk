@@ -11,7 +11,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Charger
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.charger.enable_suspend=true
+    ro.charger.enable_suspend=true \
+    persist.vendor.quick.charge=1
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -44,3 +45,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Zygote
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
+

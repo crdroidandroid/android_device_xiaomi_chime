@@ -1,7 +1,7 @@
 on boot
     # Touchpanel
     chown system system /sys/touchpanel/double_tap
-    chmod 0664 /sys/touchpanel/double_tap
+    chmod 0777 /sys/touchpanel/double_tap
 
     # Adaptive Charging
     chown system system /sys/class/power_supply/battery/input_suspend

@@ -38,6 +38,9 @@ dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
 # Netflix custom property
 ro.netflix.bsp_rev=Q6115-31409-1
 
+# RIL
+persist.sys.fflag.override.settings_provider_model=false
+
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=1440

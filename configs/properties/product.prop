@@ -29,6 +29,9 @@ ro.surface_flinger.has_wide_color_display=false
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 
+# IORap
+persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
 # Media
 ro.config.media_vol_steps=15
 vendor.audio.offload.buffer.size.kb=256

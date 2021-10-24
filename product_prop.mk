@@ -29,6 +29,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.hw=0 \
     ro.surface_flinger.use_color_management=true
 
+# IORap
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=25 \

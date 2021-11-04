@@ -153,6 +153,15 @@ PRODUCT_PACKAGES += \
 # Properties
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.late.sf.duration=10500000 \
+    debug.sf.late.app.duration=16600000 \
+    debug.sf.early.sf.duration=16600000 \
+    debug.sf.early.app.duration=16600000 \
+    debug.sf.earlyGl.sf.duration=16600000 \
+    debug.sf.earlyGl.app.duration=16600000
+
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5 \

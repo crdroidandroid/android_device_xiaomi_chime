@@ -109,7 +109,7 @@ ro.config.sdha_apps_bg_max=64
 ro.config.sdha_apps_bg_min=8
 
 # WFD settings
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 debug.sf.latch_unsignaled=1
 media.wfd.max_resolution=8
 

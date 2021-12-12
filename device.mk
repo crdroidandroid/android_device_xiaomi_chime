@@ -21,9 +21,14 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Inherit from vendor if exists
 $(call inherit-product-if-exists, vendor/xiaomi/juice/juice-vendor.mk)
 
+# Inherit QTI Bluetooth
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+    vendor/qcom/opensource/commonsys/system/bt
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 BOARD_BUILD_PRODUCT_IMAGE := true
@@ -59,12 +64,12 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor \
-    android.hardware.bluetooth.audio@2.0-impl \
-    audio.bluetooth.default \
-    libbluetooth_audio_session \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor
+   android.hardware.bluetooth.audio@2.0-impl \
+   audio.bluetooth.default \
+   BluetoothQti \
+   libbluetooth_qti \
+   vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+   vendor.qti.hardware.btconfigstore@1.0.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -165,6 +170,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.early.app.duration=16600000 \
     debug.sf.earlyGl.sf.duration=16600000 \
     debug.sf.earlyGl.app.duration=16600000
+
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := \
+    usb \
+    bt
 
 # Radio
 PRODUCT_PACKAGES += \

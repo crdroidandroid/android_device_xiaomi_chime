@@ -234,6 +234,9 @@ ro.vendor.extension_library=libqti-perfd-client.so
 # QCA1530 detection
 sys.qca1530=detect
 
+# Printk
+persist.vendor.console.silent.config=1
+
 # Radio
 persist.radio.multisim.config=dsds
 keyguard.no_require_sim=true

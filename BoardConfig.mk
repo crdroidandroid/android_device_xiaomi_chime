@@ -47,6 +47,8 @@ AUDIO_FEATURE_ENABLED_HDMI_SPK := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+TARGET_USE_QTI_BT_STACK := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Bootloader
 TARGET_BOARD_PLATFORM := bengal
@@ -162,6 +164,7 @@ TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # Platform
+BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
 
 # Recovery

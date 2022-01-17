@@ -119,10 +119,6 @@ PRODUCT_PACKAGES += \
 # Properties
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # Sensors
 PRODUCT_PACKAGES += \
     libsensorndkbridge \

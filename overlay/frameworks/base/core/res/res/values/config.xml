@@ -1377,9 +1377,14 @@
          2: gestures only for back, home and overview -->
     <integer name="config_navBarInteractionMode">2</integer>
 
-<!-- When true, indicates that the vendor's IMS implementation requires a workaround when
+    <!-- When true, indicates that the vendor's IMS implementation requires a workaround when
          sending a request to enable or disable the camera while the video session is also
          paused. -->
     <bool name="config_useVideoPauseWorkaround">true</bool>
+
+    <!-- List of comma separated package names for 
+         which we the system will not show crash, ANR,
+         etc. dialogs. --> 
+    <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 </resources>
 

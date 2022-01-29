@@ -353,21 +353,21 @@
     <ctl name="TX SMIC MUX7" value="ZERO" />
 
     <!-- Volume controls -->
-    <ctl name="RX_RX0 Digital Volume" value="88" />
-    <ctl name="RX_RX1 Digital Volume" value="88" />
-    <ctl name="RX_RX2 Digital Volume" value="88" />
+    <ctl name="RX_RX0 Digital Volume" value="84" />
+    <ctl name="RX_RX1 Digital Volume" value="84" />
+    <ctl name="RX_RX2 Digital Volume" value="84" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
     <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
-    <ctl name="TX_DEC0 Volume" value="88" />
-    <ctl name="TX_DEC1 Volume" value="88" />
-    <ctl name="TX_DEC2 Volume" value="88" />
-    <ctl name="TX_DEC3 Volume" value="88" />
-    <ctl name="TX_DEC4 Volume" value="88" />
-    <ctl name="TX_DEC5 Volume" value="88" />
-    <ctl name="TX_DEC6 Volume" value="88" />
-    <ctl name="TX_DEC7 Volume" value="88" />
+    <ctl name="TX_DEC0 Volume" value="84" />
+    <ctl name="TX_DEC1 Volume" value="84" />
+    <ctl name="TX_DEC2 Volume" value="84" />
+    <ctl name="TX_DEC3 Volume" value="84" />
+    <ctl name="TX_DEC4 Volume" value="84" />
+    <ctl name="TX_DEC5 Volume" value="84" />
+    <ctl name="TX_DEC6 Volume" value="84" />
+    <ctl name="TX_DEC7 Volume" value="84" />
 
     <ctl name="ADC1 Volume" value="12" />
     <ctl name="ADC2 Volume" value="12" />
@@ -2051,16 +2051,16 @@
         <ctl name="SLIMBUS_8 LOOPBACK Volume" value="1" />
         <ctl name="RX_CDC_DMA_RX_0 Port Mixer SLIM_8_TX" value="1" />
         <ctl name="RX_CDC_DMA_RX_0_DL_HL Switch" value="1" />
-        <ctl name="RX_RX0 Digital Volume" value="82" />
-        <ctl name="RX_RX1 Digital Volume" value="82" />
+        <ctl name="RX_RX0 Digital Volume" value="74" />
+        <ctl name="RX_RX1 Digital Volume" value="74" />
     </path>
 
     <path name="play-fm headphones">
         <ctl name="SLIMBUS_8 LOOPBACK Volume" value="1" />
         <ctl name="RX_CDC_DMA_RX_0 Port Mixer SLIM_8_TX" value="1" />
         <ctl name="RX_CDC_DMA_RX_0_DL_HL Switch" value="1" />
-        <ctl name="RX_RX0 Digital Volume" value="82" />
-        <ctl name="RX_RX1 Digital Volume" value="82" />
+        <ctl name="RX_RX0 Digital Volume" value="74" />
+        <ctl name="RX_RX1 Digital Volume" value="74" />
     </path>
 
     <path name="play-fm headset">

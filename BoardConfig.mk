@@ -102,7 +102,7 @@ BOARD_KERNEL_SEPARATED_DTBO := false
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADERS := kernel/xiaomi/juice
 TARGET_KERNEL_SOURCE := kernel/xiaomi/juice
-TARGET_KERNEL_CONFIG := vendor/juice_defconfig
+TARGET_KERNEL_CONFIG := vendor/juice-perf_defconfig
 
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img

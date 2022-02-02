@@ -177,6 +177,10 @@ TARGET_USE_AOSP_SURFACEFLINGER := true
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno610
 
+# Properties
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.default
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"

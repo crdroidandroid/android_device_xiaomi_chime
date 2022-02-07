@@ -7,7 +7,6 @@ on boot
 
     chown system system /sys/touchpanel/double_tap 
     chmod 0777 /sys/touchpanel/double_tap
-    write /sys/touchpanel/double_tap 1
 
 service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service
     interface android.hardware.light@2.0::ILight default
@@ -16,3 +15,27 @@ service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service
     group system
     # shutting off lights while powering-off
     shutdown critical
+
+# KCal
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_sat
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_val
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_min
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal
+    chmod 777 /sys/devices/platform/kcal_ctrl.0/kcal_cont
+    chmod 777 /sys/devices/platform/kcal_ctrl.0/kcal_enable
+    chmod 777 /sys/devices/platform/kcal_ctrl.0/kcal_hue
+    chmod 777 /sys/devices/platform/kcal_ctrl.0/kcal_sat
+    chmod 777 /sys/devices/platform/kcal_ctrl.0/kcal_val
+    chmod 777 /sys/devices/platform/kcal_ctrl.0/kcal_min
+    chmod 777 /sys/devices/platform/kcal_ctrl.0/kcal
+
+# USB Fastcharge
+    chown system system /sys/kernel/fast_charge/force_fast_charge
+    chmod 777 /sys/kernel/fast_charge/force_fast_charge
+
+# Vibration
+    chown system system /sys/class/leds/vibrator/vtg_level
+    chmod 777 /sys/class/leds/vibrator/vtg_level

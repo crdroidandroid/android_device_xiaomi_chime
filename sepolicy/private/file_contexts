@@ -15,3 +15,16 @@
 /(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?      u:object_r:vendor_configs_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/overlay(/.*)?    u:object_r:vendor_overlay_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/lib/modules(/.*)?   u:object_r:vendor_file:s0
+
+# KCAL
+/sys/module/msm_drm/parameters/kcal_red         u:object_r:sysfs_kcal:s0
+/sys/module/msm_drm/parameters/kcal_green       u:object_r:sysfs_kcal:s0
+/sys/module/msm_drm/parameters/kcal_blue        u:object_r:sysfs_kcal:s0
+
+# Audio socket
+/dev/socket/audio_hw_socket                   u:object_r:audio_socket:s0
+
+
+# Vibrator
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,vibrator@5700/leds/vibrator/vtg_level u:object_r:vibrator_dev:s0
+

@@ -15,3 +15,9 @@ type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_tp_fodstatus, sysfs_type, fs_type;
 type sysfs_kgsl, sysfs_type, fs_type;
 type sysfs_battery_supply, sysfs_type, fs_type;
+
+#Kcal & MiSoundFX
+type sysfs_kcal, sysfs_type, fs_type;
+type audio_socket, file_type;
+
+type vibrator_dev, sysfs_type, fs_type;

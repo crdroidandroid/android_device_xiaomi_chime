@@ -1,2 +1,6 @@
 allow system_app sysfs_battery_supply:dir search;
 allow system_app sysfs_battery_supply:file { read open getattr };
+
+allow system_app sysfs_leds:dir search;
+allow system_app vibrator_dev:dir search;
+allow system_app vibrator_dev:file rw_file_perms;

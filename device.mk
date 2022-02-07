@@ -239,3 +239,11 @@ PRODUCT_PACKAGES += \
     TelecommResCommon \
     TelephonyResCommon \
     WifiResCommon
+
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
+#  Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts

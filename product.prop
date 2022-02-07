@@ -10,13 +10,16 @@ dalvik.vm.dex2oat64.enabled=true
 drm.service.enabled=true
 
 # Graphics
-debug.hwui.renderer=opengl
+debug.hwui.renderer=skiagl
+debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 debug.sf.disable_backpressure=1
 debug.sf.disable_hwc_overlays=1
 debug.sdm.support_writeback=0
 debug.enable.sglscale=1
+debug.egl.hw=1
 debug.mdpcomp.logs=0
+persist.sys.scrollingcache=1
 debug.sf.recomputecrop=0
 vendor.display.disable_rotator_downscale=1
 ro.surface_flinger.use_color_management=true
@@ -28,9 +31,6 @@ ro.hardware.vulkan=adreno
 # Media
 ro.config.media_vol_steps=15
 vendor.audio.offload.buffer.size.kb=256
-
-# Always use GPU for screen compositing
-debug.sf.disable_hwc_overlays=1
 
 # Power-saving props
 ro.vendor.use_data_netmgrd=true

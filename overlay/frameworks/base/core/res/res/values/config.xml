@@ -1377,5 +1377,9 @@
          2: gestures only for back, home and overview -->
     <integer name="config_navBarInteractionMode">2</integer>
 
+<!-- When true, indicates that the vendor's IMS implementation requires a workaround when
+         sending a request to enable or disable the camera while the video session is also
+         paused. -->
+    <bool name="config_useVideoPauseWorkaround">true</bool>
 </resources>
 

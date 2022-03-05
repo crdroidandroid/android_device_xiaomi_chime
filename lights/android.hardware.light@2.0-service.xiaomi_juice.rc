@@ -39,3 +39,8 @@ service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service
 # Vibration
     chown system system /sys/class/leds/vibrator/vtg_level
     chmod 777 /sys/class/leds/vibrator/vtg_level
+
+    # Fast charging
+    write /sys/kernel/fast_charge/force_fast_charge 1
+    # Fingerprint Boost
+    write /sys/kernel/fp_boost/enabled 1

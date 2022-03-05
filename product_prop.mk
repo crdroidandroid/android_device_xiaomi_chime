@@ -49,3 +49,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.disable.power.collapse=0 \
     power.saving.mode=1 \
     pm.sleep_mode=1
+
+# Video Calling
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.report_codec=1 \
+    persist.vendor.radio.vdp_on_ims_cap=1 \
+    persist.vendor.qti.telephony.vt_cam_interface=2

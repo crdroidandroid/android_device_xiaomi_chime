@@ -21,6 +21,10 @@ dalvik.vm.minidebuginfo=false
 # DRM
 drm.service.enabled=true
 
+# FUSE Passthrough
+persist.sys.fuse.passthrough.enable=true
+persist.sys.fuse.bpf.enable=false
+
 # Graphics
 debug.hwui.renderer=skiagl
 debug.cpurend.vsync=false

@@ -59,7 +59,3 @@ pm.sleep_mode=1
 # Disable Rescue Party
 persist.sys.disable_rescue=true
 persist.device_config.configuration.disable_rescue_party=true
-
-# Official PixelPlus-UI Stuff
-ro.pixelplusui.maintainer=Lynx
-org.pixelplusui.device=Poco M3 & Redmi 9T

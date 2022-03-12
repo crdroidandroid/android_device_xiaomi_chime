@@ -16,6 +16,7 @@ TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
+PPUI_MAINTAINER := Lynx
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_juice

@@ -1379,5 +1379,8 @@
          which we the system will not show crash, ANR,
          etc. dialogs. --> 
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
+
+    <!-- Whether Hearing Aid profile is supported -->
+    <bool name="config_hearing_aid_profile_supported">true</bool>
 </resources>
 

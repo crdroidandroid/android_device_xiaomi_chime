@@ -23,12 +23,10 @@ drm.service.enabled=true
 
 # Graphics
 debug.hwui.renderer=skiagl
-debug.sf.enable_hwc_vds=0
 debug.sf.hw=1
-debug.sf.latch_unsignaled=0
+debug.sf.latch_unsignaled=1
 debug.sf.disable_backpressure=1
 debug.sf.disable_hwc_overlays=1
-debug.sf.enable_hwc_vds=0
 debug.sdm.support_writeback=0
 debug.enable.sglscale=1
 debug.egl.hw=1
@@ -37,7 +35,6 @@ persist.sys.scrollingcache=1
 debug.sf.recomputecrop=0
 vendor.display.disable_rotator_downscale=1
 ro.surface_flinger.use_color_management=true
-ro.surface_flinger.protected_contents=false
 ro.surface_flinger.use_context_priority=true
 ro.surface_flinger.has_wide_color_display=false
 ro.hardware.egl=adreno

@@ -98,6 +98,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2016_exclusive.xml
 
+# GMS Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/privapp-permissions-gms.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp.permissions-gms.xml
+
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1 \
     android.hardware.gnss@2.1.vendor \

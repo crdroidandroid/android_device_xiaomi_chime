@@ -60,7 +60,7 @@ debug.sf.earlyGl.app.duration=21000000
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
 # Media
-ro.config.media_vol_steps=15
+ro.config.media_vol_steps=8
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 vendor.audio.offload.buffer.size.kb=256
 vendor.audio_hal.period_size=240

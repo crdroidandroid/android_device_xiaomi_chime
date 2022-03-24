@@ -15,20 +15,20 @@
  * limitations under the License.
 */
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- The padding on the side of the navigation bar. Must be greater than or equal to
          navigation_extra_key_width -->
     <dimen name="navigation_side_padding">85dp</dimen>
 
     <!-- The padding on the start of the statusbar -->
-    <dimen name="status_bar_padding_start">5dp</dimen>
+    <dimen name="status_bar_padding_start">8dp</dimen>
 
     <!-- The padding on the end of the statusbar -->
-    <dimen name="status_bar_padding_end">5dp</dimen>
+    <dimen name="status_bar_padding_end">6dp</dimen>
 
    <!-- The padding on the top of the statusbar -->
-    <dimen name="status_bar_padding_top">8dp</dimen>
-
+    <dimen name="status_bar_padding_top">4dp</dimen>
+     
     <!-- Margin on the right side of the system icon group on Keyguard. -->
     <dimen name="system_icons_keyguard_padding_end">8dp</dimen>
 

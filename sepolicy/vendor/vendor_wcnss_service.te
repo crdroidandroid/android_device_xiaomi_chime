@@ -4,4 +4,7 @@ allow vendor_wcnss_service mnt_vendor_file:file create_file_perms;
 allow vendor_wcnss_service property_socket:sock_file { write };
 allow vendor_wcnss_service init:unix_stream_socket { connectto }; 
 
+allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:dir create_dir_perms;
+allow vendor_wcnss_service vendor_wifi_vendor_wpa_socket:sock_file create_file_perms;
+
 get_prop(vendor_wcnss_service, vendor_bluetooth_prop)

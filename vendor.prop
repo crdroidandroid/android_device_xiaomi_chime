@@ -278,8 +278,8 @@ ro.vendor.audio.soundtrigger=sva
 
 # Surfaceflinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.has_HDR_display=true
-ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=false
+ro.surface_flinger.has_wide_color_display=false
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.set_touch_timer_ms=200
 ro.surface_flinger.use_color_management=true
@@ -296,7 +296,7 @@ vendor.usb.diag.func.name=diag
 vendor.usb.use_ffs_mtp=0
 
 # Volume steps
-ro.config.media_vol_steps=11
+ro.config.media_vol_steps=16
 ro.config.vc_call_vol_steps=10
 
 # WiFi

@@ -111,13 +111,6 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
 
-# Bringup properties
-persist.vendor.qcomsysd.enabled=0
-persist.sys.force_sw_gles=1
-persist.vendor.radio.atfwd.start=true
-ro.kernel.qemu.gles=0
-qemu.hw.mainkeys=0
-
 # Camera
 camera.disable_zsl_mode=1 
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
@@ -251,6 +244,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 sys.qca1530=detect
 
 # Radio
+persist.radio.multisim.config=dsds
 keyguard.no_require_sim=true
 ro.com.android.dataroaming=true
 ro.vendor.use_data_netmgrd=true
@@ -316,7 +310,6 @@ ro.vendor.audio.soundtrigger=sva
 persist.sys.binary_xml=false
 
 # Time
-persist.timed.enable=true
 sys.vendor.shutdown.waittime=500
 
 # USB

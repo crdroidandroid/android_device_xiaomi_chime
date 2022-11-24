@@ -141,9 +141,6 @@ persist.vendor.dpmhalservice.enable=1
 drm.service.enabled=true
 media.mediadrmservice.enable=true
 
-# Enable stm events
-persist.debug.coresight.config=stm-events
-
 # Fingerprint
 persist.vendor.qfp=false
 
@@ -156,6 +153,7 @@ vendor.gatekeeper.disable_spu=true
 # Graphics
 config.disable_rtt=true
 debug.egl.hw=0
+debug.sf.enable_advanced_sf_phase_offset=1
 debug.mdpcomp.logs=0
 debug.sf.auto_latch_unsignaled=1
 debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
@@ -163,11 +161,14 @@ debug.sf.high_fps_early_phase_offset_ns=-5000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-5000000
 debug.sf.hw=0
+persist.demo.hdmirotationlock=false
+persist.sys.sf.color_mode=9
 debug.sf.latch_unsignaled=0
 dev.pm.dyn_samplingrate=1
 persist.sys.sf.color_saturation=1.0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
+ro.opengles.version=196610
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
@@ -180,8 +181,10 @@ vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
 vendor.display.disable_color_transformation=1
 vendor.display.disable_decimation=1
 vendor.display.disable_excl_rect=0
+vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_rotator_ubwc=1
+vendor.display.disable_layer_stitch=0
 vendor.display.disable_inline_rotator=1
 vendor.display.disable_scaler=0
 vendor.display.disable_ui_3d_tonemap=1
@@ -191,24 +194,12 @@ vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 vendor.display.flush_on_layer_set_empty=1
 vendor.gralloc.disable_ubwc=0
+vendor.gralloc.secure_preview_buffer_format=420_sp
 
 # Google WFD settings
 persist.debug.wfd.enable=1
 debug.sf.enable_hwc_vds=1
 persist.sys.wfd.virtual=0
-
-# HWUI Properties
-ro.hwui.texture_cache_size=72
-ro.hwui.layer_cache_size=48
-ro.hwui.r_buffer_cache_size=8
-ro.hwui.path_cache_size=32
-ro.hwui.gradient_cache_size=1
-ro.hwui.drop_shadow_cache_size=6
-ro.hwui.texture_cache_flushrate=0.4
-ro.hwui.text_small_cache_width=1024
-ro.hwui.text_small_cache_height=1024
-ro.hwui.text_large_cache_width=2048
-ro.hwui.text_large_cache_height=1024
 
 # Keystore
 ro.hardware.keystore_desede=true

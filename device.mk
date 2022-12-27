@@ -43,7 +43,6 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
     audio.r_submix.default \
-    audio.primary.bengal \
     audio.primary.default \
     audio.usb.default \
     libaudio-resampler \
@@ -130,8 +129,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.1.vendor\
     memtrack.bengal \
     gralloc.bengal \
-    hwcomposer.bengal \
-    libdisplayconfig \
     libqdMetaData \
     libqdMetaData.system \
     libsdmcore \
@@ -282,7 +279,6 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-impl \
     android.hardware.media.omx@1.0-service \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -293,8 +289,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw \
-    libstagefrighthw_omx \
-    libstagefrighthw_foundation \
     libstagefright_omx.vendor
 
 # Overlays
@@ -483,7 +477,6 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service.chime \
-    vendor.qti.hardware.vibrator-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vibrator/etc/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml

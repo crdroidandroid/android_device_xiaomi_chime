@@ -49,11 +49,6 @@ persist.mm.enable.prefetch=true
 # Netflix custom property
 ro.netflix.bsp_rev=Q6115-31409-1
 
-# Netmgr
-ro.vendor.use_data_netmgrd=true
-persist.vendor.data.iwlan.enable=true
-persist.vendor.data.mode=concurrent
-
 # NFC DT
 ro.nfc.port=I2C
 
@@ -65,11 +60,7 @@ ro.vendor.qti.core_ctl_max_cpu=4
 ro.vendor.qti.core_ctl_min_cpu=2
 
 # Radio
-DEVICE_PROVISIONED=1
-persist.sys.fflag.override.settings_provider_model=false
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
-ril.subscription.types=NV,RUIM
-ro.telephony.default_network=22,20
+persist.vendor.radio.report_codec=1
 
 # Rescue Party
 persist.device_config.configuration.disable_rescue_party=true

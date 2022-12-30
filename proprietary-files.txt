@@ -83,6 +83,11 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
+# ANT
+system_ext/bin/dun-server
+system_ext/lib/com.qualcomm.qti.ant@1.0.so
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so
+
 # Audio FX
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar

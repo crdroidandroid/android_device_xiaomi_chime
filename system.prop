@@ -3,6 +3,8 @@ vendor.bluetooth.soc=cherokee
 
 # Camera
 log.tag.CHIUSECASE=ERROR
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.snap,com.google.android.GoogleCamera
+vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android,us.zoom.videomeetings
 
 # Charger
 ro.charger.disable_init_blank=true

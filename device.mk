@@ -447,6 +447,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
+# Speed profile services and wifi-service
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Surfaceflinger
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_idle_timer_ms?=80 \

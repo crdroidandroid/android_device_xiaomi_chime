@@ -1,0 +1,20 @@
+# All unpinned blobs below are extracted from miui_LIMEGlobal_V12.5.11.0.RJQMIXM
+
+# Touch Firmware
+vendor/firmware/aw87359_abrcv.bin:recovery/root/vendor/firmware/aw87359_abrcv.bin
+vendor/firmware/aw87359_abspk.bin:recovery/root/vendor/firmware/aw87359_abspk.bin
+vendor/firmware/aw87359_drcv.bin:recovery/root/vendor/firmware/aw87359_drcv.bin
+vendor/firmware/aw87359_dspk.bin:recovery/root/vendor/firmware/aw87359_dspk.bin
+vendor/firmware/aw87519_drcv.bin:recovery/root/vendor/firmware/aw87519_drcv.bin
+vendor/firmware/aw87519_hvload.bin:recovery/root/vendor/firmware/aw87519_hvload.bin
+vendor/firmware/aw87519_kspk.bin:recovery/root/vendor/firmware/aw87519_kspk.bin
+vendor/firmware/focaltech_ts_fw.bin:recovery/root/vendor/firmware/focaltech_ts_fw.bin
+vendor/firmware/focaltech_ts_fw_TRULY.bin:recovery/root/vendor/firmware/focaltech_ts_fw_TRULY.bin
+vendor/firmware/nt33672a_tianma_novatek_ts_fw.bin:recovery/root/endor/firmware/nt33672a_tianma_novatek_ts_fw.bin
+vendor/firmware/nt33672a_tianma_novatek_ts_mp.bin:recovery/root/vendor/firmware/nt33672a_tianma_novatek_ts_mp.bin
+vendor/firmware/nt33672a_truly_novatek_ts_fw.bin:recovery/root/vendor/firmware/nt33672a_truly_novatek_ts_fw.bin
+vendor/firmware/nt33672a_truly_novatek_ts_mp.bin:recovery/root/vendor/firmware/nt33672a_truly_novatek_ts_mp.bin
+vendor/firmware/nt33672d_tianma_novatek_ts_fw.bin:recovery/root/vendor/firmware/nt33672d_tianma_novatek_ts_fw.bin
+vendor/firmware/nt33672d_tianma_novatek_ts_mp.bin:recovery/root/vendor/firmware/nt33672d_tianma_novatek_ts_mp.bin
+vendor/firmware/nt33672d_xinli_novatek_ts_fw.bin:recovery/root/vendor/firmware/nt33672d_xinli_novatek_ts_fw.bin
+vendor/firmware/nt33672d_xinli_novatek_ts_mp.bin:recovery/root/vendor/firmware/nt33672d_xinli_novatek_ts_mp.bin

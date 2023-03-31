@@ -447,6 +447,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
+# Surfaceflinger
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.set_idle_timer_ms?=80 \
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -508,3 +515,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+

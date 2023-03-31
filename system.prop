@@ -18,6 +18,7 @@ persist.vendor.dpm.feature=1
 
 # Display
 persist.demo.hdmirotationlock=false
+debug.cpurend.vsync=false
 
 # Fingerprint
 ro.hardware.fp.sideCap=true

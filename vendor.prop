@@ -194,7 +194,7 @@ vendor.gralloc.secure_preview_buffer_format=420_sp
 
 # Google WFD settings
 persist.debug.wfd.enable=1
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 persist.sys.wfd.virtual=0
 
 # Keystore

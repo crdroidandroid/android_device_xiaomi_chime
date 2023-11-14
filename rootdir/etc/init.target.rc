@@ -51,6 +51,12 @@ on init
     start vendor.qseecomd
     start keymaster-4-0
 
+# Custom Sched Tunables
+   write /dev/stune/background/schedtune.prefer_idle 1
+   write /dev/stune/rt/schedtune.boost 1
+   write /dev/stune/rt/schedtune.prefer_idle 1
+   write /dev/stune/top-app/schedtune.boost 1
+
 on early-fs
     start vold
 

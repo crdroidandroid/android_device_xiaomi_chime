@@ -30,6 +30,9 @@
 #xiong add scancode
 import init.mishow.ctl.rc
 
+# Initialize logcat.rc
+import /vendor/etc/init/hw/logcat.rc
+
 on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_q6_pdr audio_q6_notifier audio_snd_event audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_lpi audio_swr audio_swr_ctrl audio_platform audio_stub audio_wcd_core audio_wcd9xxx audio_wsa881x_analog audio_bolero_cdc audio_va_macro audio_rx_macro audio_tx_macro audio_mbhc audio_wcd937x audio_wcd937x_slave audio_pm2250_spmi audio_aw87359_audio audio_aw87519_audio audio_rouleur audio_rouleur_slave audio_machine_bengal
     write /proc/sys/kernel/sched_boost 1
@@ -47,6 +50,12 @@ on init
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     start vendor.qseecomd
     start keymaster-4-0
+
+# Custom Sched Tunables
+   write /dev/stune/background/schedtune.prefer_idle 1
+   write /dev/stune/rt/schedtune.boost 1
+   write /dev/stune/rt/schedtune.prefer_idle 1
+   write /dev/stune/top-app/schedtune.boost 1
 
 on early-fs
     start vold
@@ -87,6 +96,11 @@ on early-boot
     start vendor.sensors
 
 on boot
+# IRQ tuning from Razer Phone 2 
+    # msm_drm
+    write /proc/irq/7/smp_affinity_list 2
+    # kgsl-3d0
+    write /proc/irq/489/smp_affinity_list 1
 # wuzhisen change Define cpu set for audio app. This is to optimize
 # audio scheduling against lpm exit latencies
     write /dev/cpuset/audio-app/cpus 1-2
@@ -439,6 +453,11 @@ service panel_color /vendor/bin/panelcolor_bin
 
 on property:sys.boot_completed=1
     start panel_color
+
+on property:vendor.post_boot.parsed=1
+
+# Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
 
     # Restrict permissions to socket file
     # to hide Magisk & co.

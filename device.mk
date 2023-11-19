@@ -108,8 +108,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    vendor.display.config@1.14 \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.5 \
     vendor.display.config@1.11.vendor \
+    vendor.display.config@1.9.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
@@ -319,6 +321,23 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2 \
     vendor.qti.hardware.perf@2.2.vendor
 
+# Dex
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+ART_BUILD_TARGET_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_HOST_DEBUG := false
+endif
+
+# AOT Preload
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3 \
+    Launcher3QuickStep \
+    Settings \
+    SystemUI
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -405,7 +424,8 @@ PRODUCT_PACKAGES += \
     init.stnfc.rc \
     init.target.rc \
     fstab.qcom \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    logcat.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
@@ -447,8 +467,23 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libpiex_shim
 
+# Speed profile services and wifi-service
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Surfaceflinger
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.set_idle_timer_ms=80 \
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true
+
 # Telephony
 PRODUCT_PACKAGES += \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
@@ -508,3 +543,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+

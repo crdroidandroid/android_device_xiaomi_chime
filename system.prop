@@ -18,6 +18,7 @@ persist.vendor.dpm.feature=1
 
 # Display
 persist.demo.hdmirotationlock=false
+debug.cpurend.vsync=false
 
 # Fingerprint
 ro.hardware.fp.sideCap=true
@@ -89,3 +90,6 @@ persist.timed.enable=true
 # WFD settings
 debug.sf.enable_hwc_vds=0
 media.wfd.max_resolution=8
+
+# Zygisk Preforking
+persist.device_config.runtime_native.usap_pool_enabled=true

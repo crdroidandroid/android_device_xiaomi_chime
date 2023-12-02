@@ -151,6 +151,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
+debug.sf.disable_backpressure=1
 debug.sf.enable_transaction_tracing=false
 config.disable_rtt=true
 debug.egl.hw=0

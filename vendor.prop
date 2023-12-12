@@ -151,6 +151,8 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
+debug.sf.disable_backpressure=1
+debug.sf.enable_transaction_tracing=false
 config.disable_rtt=true
 debug.egl.hw=0
 debug.sf.enable_advanced_sf_phase_offset=1
@@ -159,6 +161,9 @@ debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
 debug.sf.high_fps_early_phase_offset_ns=-5000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
+debug.hwui.skia_atrace_enabled=false
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 debug.sf.hw=0
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_mode=9
@@ -172,7 +177,6 @@ ro.surface_flinger.protected_contents=true
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=false
 ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
@@ -185,6 +189,7 @@ vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_rotator_ubwc=1
 vendor.display.disable_layer_stitch=0
 vendor.display.disable_inline_rotator=1
+vendor.display.disable_rotator_downscale=1
 vendor.display.disable_ui_3d_tonemap=1
 vendor.display.disable_virtual_display=1
 vendor.display.enable_default_color_mode=1
@@ -302,6 +307,9 @@ ro.vendor.audio.soundtrigger=sva
 
 # System
 persist.sys.binary_xml=false
+
+# Thermal
+vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # Time
 sys.vendor.shutdown.waittime=500

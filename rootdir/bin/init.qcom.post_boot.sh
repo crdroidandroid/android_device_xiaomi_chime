@@ -3829,7 +3829,6 @@ case "$target" in
 
             # cpuset settings
             echo 0-2     > /dev/cpuset/background/cpus
-	    echo 4-7     > /dev/cpuset/camera-daemon/cpus
             echo 0-3     > /dev/cpuset/system-background/cpus
             echo 4-6     > /dev/cpuset/foreground/cpus
             echo 0-7     > /dev/cpuset/top-app/cpus

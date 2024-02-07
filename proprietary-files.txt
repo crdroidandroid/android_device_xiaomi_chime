@@ -1,4 +1,5 @@
 # All unpinned blobs below are extracted from miui_LIMEGlobal_V14.0.5.0.SJQMIXM
+# devon blobs extracted from motorola/devon_g/devon:11/S2SN32.34-72-46/56963:user/release
 
 # ACDB
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
@@ -38,16 +39,13 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# ADSP
+# ADSP - devon
 vendor/bin/adsprpcd
-vendor/bin/dspservice
 vendor/etc/init/vendor.qti.adsprpc-service.rc
-vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
-vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsprpc.so
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadspd.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
@@ -250,9 +248,7 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Display Calibration
 vendor/bin/qdcmss
-vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/init/qdcmss.rc
-vendor/etc/SVIConfig.xml
 
 # Display Calib Data
 vendor/etc/qdcm_calib_data_Sharp_2k_cmd_mode_qsync_dsi_panel.xml
@@ -287,44 +283,28 @@ vendor/etc/qdcm_calib_data_sw43404_amoled_video_mode_dsi_boe_panel_with_DSC.xml
 vendor/etc/qdcm_calib_data_td4330_v2_cmd_mode_dsi_truly_panel.xml
 vendor/etc/qdcm_calib_data_td4330_v2_video_mode_dsi_truly_panel.xml
 
-# Display HDR
-vendor/lib64/libhdr_tm.so
-
 # Display HWC
 vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmutils.so
 
-# Display SDM
-vendor/lib64/libdisplayconfig.qti.so
-vendor/lib64/libdisplaydebug.so
+# Display - devon
+vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libdpp_manager.so
 vendor/lib64/libdpps.so
-vendor/lib64/libdrm.so
-vendor/lib64/libdrmutils.so
-vendor/lib64/libgpu_tonemapper.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
-vendor/lib64/libhistogram.so
-vendor/lib64/libqdutils.so
+vendor/lib64/libhdr_tm.so
 vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# Display postprocessing
+# Display postprocessing - devon
 vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/ppd
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdisp-aba.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.color@1.1.so
 vendor/lib64/vendor.display.color@1.2.so
@@ -372,11 +352,14 @@ vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libSecureUILib.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libcpion.so
+vendor/lib64/libdrm.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
+vendor/lib64/libdrmutils.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
+vendor/lib64/libsdedrm.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
@@ -407,12 +390,6 @@ vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
-
-# Factory
-vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
-vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
-vendor/lib64/vendor.qti.hardware.factory@1.0.so
-vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
@@ -519,7 +496,7 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
-# Graphics Adreno
+# Graphics - devon
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -528,7 +505,6 @@ vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
-vendor/lib/libGLESv2_adreno.so
 vendor/lib/libOpenCL.so
 vendor/lib/libVkLayer_q3dtools.so
 vendor/lib/libadreno_app_profiles.so
@@ -556,6 +532,10 @@ vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 
+# Graphics Vulkan - devon
+vendor/lib/hw/vulkan.adreno.so
+vendor/lib64/hw/vulkan.adreno.so
+
 # Graphic Firmware
 vendor/firmware/a610_zap.b00
 vendor/firmware/a610_zap.b01
@@ -581,10 +561,6 @@ vendor/firmware/a702_zap.b01
 vendor/firmware/a702_zap.b02
 vendor/firmware/a702_zap.elf
 vendor/firmware/a702_zap.mdt
-
-# Graphics Vulkan
-vendor/lib/hw/vulkan.adreno.so
-vendor/lib64/hw/vulkan.adreno.so
 
 # IMS
 -system_ext/app/uceShimService/uceShimService.apk
@@ -677,8 +653,12 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
 # Listen
+vendor/lib/libsmwrapper.so
+
+# Listen - devon
 vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
+vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
@@ -686,7 +666,6 @@ vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
-vendor/lib/libsmwrapper.so
 
 # Media
 system_ext/lib/libmmosal.so
@@ -1136,7 +1115,7 @@ vendor/etc/sensors/proto/sns_ultra_violet.proto
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
 
-# Snapdragon Computer Vision Engine
+# Snapdragon Computer Vision Engine - devon
 vendor/lib/libfastcvdsp_stub.so
 -vendor/lib/libfastcvopt.so
 vendor/lib/libscveCommon.so
@@ -1219,7 +1198,7 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# VPP
+# VPP - devon
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so

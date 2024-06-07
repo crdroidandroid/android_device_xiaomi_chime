@@ -1,5 +1,5 @@
 # All unpinned blobs below are extracted from miui_LIMEGlobal_V14.0.5.0.SJQMIXM
-# devon blobs extracted from motorola/devon_g/devon:11/S2SN32.34-72-46/56963:user/release
+# devon blobs extracted from motorola/devon_g/devon:11/T2SNS33.73-22-3-6/783a6:user/release-keys
 
 # ACDB
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb

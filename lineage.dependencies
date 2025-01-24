@@ -3,18 +3,18 @@
   "Remote": "github",
   "Repository": "Joe7500/vendor_xiaomi_chime",
   "Target_path": "vendor/xiaomi/chime",
-  "Branch": "lineage-22"
+  "Branch": "lineage-21"
  },
  {
   "Remote": "github",
   "Repository": "LineageOS/android_hardware_xiaomi",
   "Target_path": "hardware/xiaomi",
-  "Branch": "lineage-22.1"
+  "Branch": "lineage-21"
  },
  {
   "Remote": "github",
-  "Repository": "greenforce-project/kernel_xiaomi_citrus_sm6115",
+  "Repository": "Joe7500/kernel_xiaomi_chime",
   "Target_path": "kernel/xiaomi/chime",
-  "Branch": "13.0.0-perf"
+  "Branch": "android"
  } 
 ]

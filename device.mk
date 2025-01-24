@@ -26,11 +26,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Product Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# Copy out prebuilt dtb
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/prebuilt/dtbo.img:dtbo.img \
-	$(LOCAL_PATH)/prebuilt/dtb:dtb.img
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi

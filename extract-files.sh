@@ -67,7 +67,10 @@ function blob_fixup() {
         vendor/lib64/mediadrm/libwvdrmengine.so|vendor/lib64/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
-esac
+	vendor/etc/seccomp_policy/atfwd@2.0.policy)
+	    echo 'gettid: 1' >> ${2}
+	    ;;
+    esac
 }
 
 # Initialize the helper

@@ -20,6 +20,7 @@ limitations under the License.
 -->
 
 <MediaCodecs>
+    <Include href="media_codecs_dolby_audio.xml" />
     <Encoders>
         <MediaCodec name="OMX.qcom.video.encoder.avc" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="238-238" />

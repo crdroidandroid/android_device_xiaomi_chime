@@ -13,5 +13,10 @@
       "repository":"crdroidandroid/android_vendor_xiaomi_chime",
       "target_path":"vendor/xiaomi/chime",
       "branch":"16.0"
+   },
+   {
+    "repository" : "crdroidandroid/android_hardware_dolby",
+    "target_path": "hardware/dolby",
+    "branch"     : "16.0-redwood"
    }
 ]

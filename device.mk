@@ -142,6 +142,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
@@ -330,7 +333,8 @@ PRODUCT_PACKAGES += \
     SettingsResChime \
     SystemUIResChime \
     TelephonyResChime \
-    WifiResCommon
+    WifiResCommon \
+    Launcher3DeviceOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

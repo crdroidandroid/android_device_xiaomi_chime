@@ -1244,4 +1244,11 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+         <name>android.hardware.graphics.composer</name>
+         <interface>
+             <name>IComposer</name>
+             <instance>default</instance>
+         </interface>
+    </hal>
 </compatibility-matrix>

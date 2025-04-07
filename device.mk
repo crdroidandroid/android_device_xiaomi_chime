@@ -90,10 +90,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-# Biomterics
-PRODUCT_PACKAGES += \
-    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
@@ -130,6 +126,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.composer-service.rc \
     vendor.qti.hardware.display.allocator@1.0.vendor \
     vendor.qti.hardware.display.allocator@3.0.vendor \
     vendor.qti.hardware.display.allocator@4.0.vendor \
@@ -141,17 +138,16 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.memtrack-service \
     vendor.qti.hardware.display.mapperextensions@1.0.vendor \
     vendor.qti.hardware.display.mapperextensions@1.1.vendor\
-    gralloc.default \
     libqdMetaData \
     libqdMetaData.system \
     libsdmcore \
     libsdmutils \
-    libtinyxml
-
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.memtrack-service
+    libtinyxml \
+    gralloc.qcom
+#    hwcomposer.qcom
 
 PRODUCT_PACKAGES += \
     libvulkan
@@ -159,7 +155,8 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    libdrm.vendor
 
 # Fastboot - Dynamic Partition
 PRODUCT_PACKAGES += \
@@ -175,10 +172,23 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
 # Fingerprint
+#PRODUCT_PACKAGES += \
+#    com.fingerprints.extension@1.0.vendor \
+#    vendor.goodix.hardware.fingerprintextension@1.0.vendor \
+#    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+#    libhidlbase_shim
+
+#PRODUCT_PACKAGES += \
+#    android.hardware.biometrics.fingerprint@2.1-service \
+#    android.hardware.biometrics.fingerprint@2.1.vendor \
+#    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+#    vendor.goodix.hardware.fingerprintextension@1.0.vendor \
+#    com.fingerprints.extension@1.0.vendor \
+#    fingerprint.default
+
 PRODUCT_PACKAGES += \
-    com.fingerprints.extension@1.0.vendor \
-    vendor.goodix.hardware.fingerprintextension@1.0.vendor \
-    libhidlbase_shim
+     libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+####     com.fingerprints.extension@1.0.vendor
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -277,6 +287,15 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
+ 
+# MLIPay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.0.vendor \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor \
+    vendor.xiaomi.hardware.mtdservice@1.0.vendor \
+    vendor.xiaomi.hardware.mtdservice@1.1.vendor \
+    vendor.xiaomi.hardware.mtdservice@1.2.vendor \
+    vendor.xiaomi.hardware.mtdservice@1.3.vendor
 
 # Network
 PRODUCT_PACKAGES += \
@@ -292,9 +311,9 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     libchrome.vendor \
     nfc_nci.st21nfc.default \
-    NfcNci \
     SecureElement \
-    Tag
+    Tag \
+#    NfcNci
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/android.hardware.nfc@1.2-service.st.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service.st.rc
@@ -315,6 +334,11 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_omx.vendor \
     libstagefright_softomx_plugin.vendor
+#    libOmxAacEnc \
+#    libOmxAmrEnc \
+#    libOmxEvrcEnc \
+#    libOmxG711Enc \
+#    libOmxQcelp13Enc \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -404,9 +428,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat
+#PRODUCT_PACKAGES += \
+#    libprotobuf-cpp-full-3.9.1-vendorcompat \
+#    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -490,10 +514,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Boot image profiling
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
-endif
+#ifeq ($(TARGET_BUILD_VARIANT),user)
+#PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+#PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+#endif
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -568,23 +592,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 #  WFD
-PRODUCT_PACKAGES += \
-    libdisplayconfig.qti \
-    libdisplayconfig.system.qti \
-    android.media.audio.common.types-V2-cpp \
-    vendor.qti.hardware.display.config-V5-ndk \
-    libwfds \
-    libwfdaac_vendor \
-    libavservices_minijail \
-    libnl
+#PRODUCT_PACKAGES += \
+#    libdisplayconfig.qti \
+#    libdisplayconfig.system.qti \
+#    android.media.audio.common.types-V2-cpp \
+#    vendor.qti.hardware.display.config-V5-ndk \
+#    libwfds \
+#    libwfdaac_vendor \
+#    libavservices_minijail \
+#    libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    debug.sf.enable_hwc_vds=0 \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
+#PRODUCT_SYSTEM_EXT_PROPERTIES += \
+#    debug.sf.enable_hwc_vds=0 \
+#    persist.debug.wfd.enable=1 \
+#    persist.sys.wfd.virtual=0
 
 # AOSP QCOM common
 #TARGET_BOARD_PLATFORM := bengal

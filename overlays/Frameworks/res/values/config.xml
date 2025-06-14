@@ -927,4 +927,11 @@
 
     <!-- Whether the new Auto Selection Network UI should be shown -->
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
+    <!-- If not empty, sets the AVC codec profile level used for the internal screen recorder.
+         Possible values: 3, 3.1, 3.2, 4, 4.1, 4.2 -->
+    <string name="config_screenRecorderAVCProfileLevel" translatable="false">3.1</string>
+
+    <!-- media controls -->
+    <bool name="config_mediaControlsRippleByDefault">false</bool>
+    <bool name="config_mediaControlsTurbulenceByDefault">false</bool>
 </resources>

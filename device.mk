@@ -237,7 +237,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.chime
+    android.hardware.light-service.lineage
 
 # LiveDisplay
 PRODUCT_PACKAGES += \

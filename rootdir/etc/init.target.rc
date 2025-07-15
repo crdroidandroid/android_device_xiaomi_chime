@@ -345,7 +345,6 @@ service charge_logger vendor/bin/charge_logger
    oneshot    
 
 on property:sys.boot_completed=1
-   stop statsd
    start charge_logger
 
 #xiong add charge_logger

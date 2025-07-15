@@ -4,3 +4,19 @@ get_prop(system_server, vendor_display_notch_prop)
 get_prop(system_server, vendor_persist_camera_prop)
 
 allow system_server system_server:capability { sys_module };
+
+allow system_server proc_buddyinfo:file r_file_perms;
+allow system_server proc_cgroups:file r_file_perms;
+allow system_server proc_diskstats:file r_file_perms;
+allow system_server proc_interrupts:file r_file_perms;
+allow system_server proc_iomem:file r_file_perms;
+allow system_server proc_keys:file r_file_perms;
+allow system_server proc_kmsg:file r_file_perms;
+allow system_server proc_kpageflags:file r_file_perms;
+allow system_server proc_misc:file r_file_perms;
+allow system_server proc_slabinfo:file r_file_perms;
+allow system_server proc_swaps:file r_file_perms;
+allow system_server proc_timer:file r_file_perms;
+allow system_server proc_uptime:file r_file_perms;
+allow system_server proc_zoneinfo:file r_file_perms;
+allow system_server system_file:dir map;

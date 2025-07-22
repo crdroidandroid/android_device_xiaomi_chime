@@ -334,17 +334,9 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service \
-    libOmxCore \
-    libOmxVdec \
-    libOmxVenc \
     libstagefrighthw \
     libstagefright_omx.vendor \
     libstagefright_softomx_plugin.vendor
-#    libOmxAacEnc \
-#    libOmxAmrEnc \
-#    libOmxEvrcEnc \
-#    libOmxG711Enc \
-#    libOmxQcelp13Enc \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \

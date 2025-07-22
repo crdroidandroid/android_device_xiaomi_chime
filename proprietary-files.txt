@@ -647,6 +647,12 @@ vendor/lib/libmmosal.so
 vendor/lib64/libmmosal.so
 
 # Media OMX
+vendor/lib/libOmxCore.so
+vendor/lib64/libOmxCore.so
+vendor/lib/libOmxVenc.so
+vendor/lib/libOmxVdec.so
+vendor/lib64/libOmxVenc.so
+vendor/lib64/libOmxVdec.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so

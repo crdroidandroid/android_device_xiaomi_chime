@@ -941,9 +941,9 @@
     <integer name="config_longAnimTime">500</integer>
     -->
 
-    <integer name="config_shortAnimTime">100</integer>
+    <!-- <integer name="config_shortAnimTime">100</integer>
     <integer name="config_mediumAnimTime">200</integer>
-    <integer name="config_longAnimTime">250</integer>
+    <integer name="config_longAnimTime">250</integer> -->
 
     <!-- Flag indicating whether the surface flinger has limited
          alpha compositing functionality in hardware.  If set, the window

@@ -26,6 +26,12 @@
 
     <dimen name="rounded_corner_radius_top">94.0px</dimen>
 
+    <dimen name="status_bar_height">32.0dip</dimen>
+
+    <dimen name="status_bar_height_default">32dp</dimen>
+
+    <dimen name="status_bar_height_portrait">32dp</dimen>
+
     <dimen name="status_bar_height_landscape">28dp</dimen>
 
 </resources>

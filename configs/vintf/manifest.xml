@@ -638,15 +638,6 @@
         <fqname>@1.1::ISurfaceFlingerConfigs/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.lineage.livedisplay</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IPictureAdjustment</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.wifidisplaysession</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IWifiDisplaySession/wifidisplaysession</fqname>
@@ -664,14 +655,4 @@
         </interface>
         <fqname>@2.1::IBiometricsFingerprint/default</fqname>
     </hal>
-    <!-- <hal format="hidl">
-	<name>android.hardware.graphics.composer</name>
-	<transport>hwbinder</transport>
-	<version>2.1</version>
-        <interface>
-            <name>IComposer</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.1::IComposer/default</fqname>
-    </hal> -->
 </manifest>

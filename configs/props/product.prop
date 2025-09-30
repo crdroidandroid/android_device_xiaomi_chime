@@ -6,8 +6,13 @@ audio.sys.routing.latency=0
 audio.offload.min.duration.secs=30
 audio.sys.offload.pstimeout.secs=3
 
+# BPF
+ro.bpf.kver_override=5.10.239
+
 # Cached app compaction
 persist.device_config.activity_manager.use_compaction=true
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
+
+

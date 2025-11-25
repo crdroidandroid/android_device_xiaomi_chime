@@ -59,6 +59,9 @@ blob_fixups: blob_fixups_user_type = {
         .fix_soname(),
     'vendor/lib64/hw/focal_fingerprint.default.so': blob_fixup()
         .fix_soname(),
+    ('vendor/bin/STFlashTool',
+     'vendor/lib64/libstfactory-vendor.so',): blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

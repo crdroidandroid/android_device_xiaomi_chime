@@ -209,7 +209,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/input_suspend)
-$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -244,7 +244,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.sdm
 
-$(call soong_config_set,livedisplay_sdm,enable_dm,false)
+$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
 
 # Keylayout
 PRODUCT_COPY_FILES += \

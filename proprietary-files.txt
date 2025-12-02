@@ -1459,8 +1459,6 @@ system_ext/lib/vendor.qti.diaghal@1.0.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib64/libmm-color-convertor.so
-vendor/lib/libprotobuf-cpp-full-3.9.1.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
 vendor/lib/libcert_parse.wpa_s.so
 vendor/lib64/libcert_parse.wpa_s.so
 vendor/lib/libofflinelog.so
@@ -1472,8 +1470,6 @@ vendor/lib/libasn1crtx.so
 vendor/lib64/libasn1crtx.so
 vendor/lib/libasn1crt.so
 vendor/lib64/libasn1crt.so
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib/libqmi_legacy.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib/libqcbor.so

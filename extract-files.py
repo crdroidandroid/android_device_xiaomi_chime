@@ -32,6 +32,10 @@ namespace_imports = [
     'hardware/xiaomi',
 ]
 
+lib_fixups: lib_fixups_user_type = {
+    libs_proto_3_9_1: lib_fixup_vendorcompat,
+}
+
 blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy': blob_fixup()
         .add_line_if_missing('madvise: 1'),
@@ -68,6 +72,7 @@ module = ExtractUtilsModule(
     'chime',
     'xiaomi',
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 

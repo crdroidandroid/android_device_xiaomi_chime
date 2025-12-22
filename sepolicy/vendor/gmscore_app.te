@@ -1,0 +1,2 @@
+allow gmscore_app apex_system_server_data_file:dir search;
+allow gmscore_app zygote:unix_stream_socket getopt;

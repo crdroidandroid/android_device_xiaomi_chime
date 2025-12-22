@@ -1,7 +1,4 @@
 hal_client_domain(hal_graphics_composer_default, vendor_hal_qspmhal);
 
-allow hal_graphics_composer_default graphics_config_prop:file read;
-allow hal_graphics_composer_default graphics_config_writable_prop:file read;
-
-allow hal_graphics_composer_default graphics_config_prop:file open;
-allow hal_graphics_composer_default graphics_config_writable_prop:file open;
+allow hal_graphics_composer_default graphics_config_prop:file { getattr map open read };
+allow hal_graphics_composer_default graphics_config_writable_prop:file { getattr map open read };

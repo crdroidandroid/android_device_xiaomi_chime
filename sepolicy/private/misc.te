@@ -1,0 +1,6 @@
+#============= permissioncontroller_app ==============
+allow permissioncontroller_app zygote:unix_stream_socket getopt;
+
+#============= vold_prepare_subdirs ==============
+allow vold_prepare_subdirs checkin_data_file:dir relabelfrom;
+

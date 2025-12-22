@@ -2,5 +2,4 @@
 r_dir_file(hal_bluetooth_default, vendor_wifi_vendor_data_file)
 
 allow hal_bluetooth_default vendor_bt_data_file:dir search;
-allow hal_bluetooth_default vendor_diag_device:chr_file { read write };
-
+allow hal_bluetooth_default vendor_diag_device:chr_file { read write ioctl open };

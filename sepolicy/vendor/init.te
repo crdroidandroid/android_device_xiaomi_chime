@@ -19,3 +19,4 @@ allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
 allow init vendor_sysfs_scsi_target:file w_file_perms;
 allow init vendor_sysfs_mmc_host:file w_file_perms;
 
+allow init hal_fingerprint_default:process ptrace;

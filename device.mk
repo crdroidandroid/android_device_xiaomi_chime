@@ -142,7 +142,6 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     libtinyxml \
     gralloc.qcom
-#    hwcomposer.qcom
 
 PRODUCT_PACKAGES += \
     libvulkan
@@ -167,23 +166,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
 # Fingerprint
-#PRODUCT_PACKAGES += \
-#    com.fingerprints.extension@1.0.vendor \
-#    vendor.goodix.hardware.fingerprintextension@1.0.vendor \
-#    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
-#    libhidlbase_shim
-
-#PRODUCT_PACKAGES += \
-#    android.hardware.biometrics.fingerprint@2.1-service \
-#    android.hardware.biometrics.fingerprint@2.1.vendor \
-#    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
-#    vendor.goodix.hardware.fingerprintextension@1.0.vendor \
-#    com.fingerprints.extension@1.0.vendor \
-#    fingerprint.default
-
 PRODUCT_PACKAGES += \
-     libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
-####     com.fingerprints.extension@1.0.vendor
+     vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+     com.fingerprints.extension@1.0.vendor
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -317,7 +302,6 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag \
     libbase_shim
-#    NfcNci
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/android.hardware.nfc@1.2-service.st.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service.st.rc
@@ -338,11 +322,6 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_omx.vendor \
     libstagefright_softomx_plugin.vendor
-#    libOmxAacEnc \
-#    libOmxAmrEnc \
-#    libOmxEvrcEnc \
-#    libOmxG711Enc \
-#    libOmxQcelp13Enc \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -499,7 +478,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp/qspm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qspm.policy \
     $(LOCAL_PATH)/seccomp/qti-systemd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qti-systemd.policy \
-    $(LOCAL_PATH)/seccomp/wfdhdcphalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdhdcphalservice.policy
+    $(LOCAL_PATH)/seccomp/wfdhdcphalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdhdcphalservice.policy \
+    $(LOCAL_PATH)/seccomp/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
+    $(LOCAL_PATH)/seccomp/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -593,31 +574,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-#  WFD
-#PRODUCT_PACKAGES += \
-#    libdisplayconfig.qti \
-#    libdisplayconfig.system.qti \
-#    android.media.audio.common.types-V2-cpp \
-#    vendor.qti.hardware.display.config-V5-ndk \
-#    libwfds \
-#    libwfdaac_vendor \
-#    libavservices_minijail \
-#    libnl
-
-#PRODUCT_BOOT_JARS += \
-#    WfdCommon
-
-#PRODUCT_SYSTEM_EXT_PROPERTIES += \
-#    debug.sf.enable_hwc_vds=0 \
-#    persist.debug.wfd.enable=1 \
-#    persist.sys.wfd.virtual=0
-
-# AOSP QCOM common
-#TARGET_BOARD_PLATFORM := bengal
-#TARGET_COMMON_QTI_COMPONENTS := wfd
-#TARGET_EXCLUDE_QCOM_SEPOLICY := true
-#include device/qcom/common/Android.mk
-#include device/qcom/common/common.mk
-#include device/qcom/common/components.mk
-#include device/qcom/common/BoardConfigQcom.mk

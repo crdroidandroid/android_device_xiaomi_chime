@@ -1,0 +1,17 @@
+ [
+   {
+      "repository":"crdroidandroid/android_kernel_xiaomi_chime",
+      "target_path":"kernel/xiaomi/chime",
+      "branch":"16.0"
+   },
+   {
+      "repository":"crdroidandroid/android_hardware_xiaomi",
+      "target_path":"hardware/xiaomi",
+      "branch":"16.0"
+   },
+   {
+      "repository":"crdroidandroid/android_vendor_xiaomi_chime",
+      "target_path":"vendor/xiaomi/chime",
+      "branch":"16.0"
+   }
+]

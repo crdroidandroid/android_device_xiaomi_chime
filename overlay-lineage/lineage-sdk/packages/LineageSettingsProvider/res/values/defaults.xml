@@ -21,4 +21,8 @@
          * 2: show the clock in the left position (LTR)
     -->
     <integer name="def_clock_position">2</integer>
+
+    <!-- Default for Settings.Global.DISABLE_WINDOW_BLURS -->
+    <integer name="def_disable_window_blurs">1</integer>
+
 </resources>

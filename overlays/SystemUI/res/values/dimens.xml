@@ -53,4 +53,7 @@
     <!-- Height of the status bar header bar when on Keyguard -->
     <dimen name="status_bar_header_height_keyguard">32dp</dimen>
 
+    <!-- Blur radius behind Notification Shade -->
+    <dimen name="max_shade_window_blur_radius">17dp</dimen>
+
 </resources>

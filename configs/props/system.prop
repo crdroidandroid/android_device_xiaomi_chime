@@ -21,7 +21,6 @@ persist.demo.hdmirotationlock=false
 debug.cpurend.vsync=false
 debug.sf.disable_backpressure=1
 debug.sf.auto_latch_unsignaled=0
-debug.sf.disable_client_composition_cache=1
 debug.hwui.skia_atrace_enabled=false
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false

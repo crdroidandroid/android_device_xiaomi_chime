@@ -531,6 +531,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinyxml2
 
+# UFFD
+PRODUCT_ENABLE_UFFD_GC := true
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti

@@ -505,3 +505,149 @@ on property:sys.boot_completed=1
 ########### FTM end ##########
 ########### FTM end ##########
 ########### FTM end ##########
+
+on property:sys.boot_completed=1
+ # libperfmgr device node stuff
+    # Create stune top-app and foreground
+    mkdir /dev/stune/top-app
+    chown system system /dev/stune/top-app
+    chmod 0664 /dev/stune/top-app/schedtune.boost
+    chmod 0664 /dev/stune/top-app/schedtune.prefer_idle
+    chown system system /dev/stune/top-app/schedtune.boost
+    chown system system /dev/stune/top-app/schedtune.prefer_idle
+
+    mkdir /dev/stune/foreground
+    chown system system /dev/stune/foreground
+    chmod 0664 /dev/stune/foreground/schedtune.boost
+    chmod 0664 /dev/stune/foreground/schedtune.prefer_idle
+    chown system system /dev/stune/foreground/schedtune.boost
+    chown system system /dev/stune/foreground/schedtune.prefer_idle
+
+    wait /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length 20
+
+    # Permissions for libperfmgr
+    chown root system /sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq
+    chown root system /sys/class/devfreq/soc:qcom,cpu4-cpu-ddr-lat/min_freq
+    chown root system /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory
+    chown root system /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length
+    chown root system /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count
+    chown root system /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/io_percent
+    chown root system /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms
+    chown root system /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/min_freq
+    chown root system /sys/class/devfreq/soc:qcom,gpubw/min_freq
+    chown root system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chown root system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chown root system /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chown root system /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chown root system /sys/class/kgsl/kgsl-3d0/idle_timer
+    chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chown root system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+    chown root system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu4-cpu-ddr-lat/min_freq
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/io_percent
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/min_freq
+    chmod 0664 /sys/class/devfreq/soc:qcom,gpubw/min_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/idle_timer
+
+    chown root system /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    chown root system /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
+    chown root system /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chown root system /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chown root system /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
+    chown root system /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+
+    chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+
+    chown root system /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
+    chown root system /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
+
+    chown root system /sys/touchpanel/double_tap
+    chmod 0664 /sys/touchpanel/double_tap
+
+    # Permissions for libperfmgr ( more /sys/devices )
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat/devfreq
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat/devfreq/soc:qcom,cpu0-cpu-ddr-lat
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat/devfreq
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat/devfreq/soc:qcom,cpu0-cpu-ddr-lat
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq
+
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat/devfreq
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat/devfreq/soc:qcom,cpu4-cpu-ddr-lat
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat/devfreq/soc:qcom,cpu4-cpu-ddr-lat/min_freq
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat/devfreq
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat/devfreq/soc:qcom,cpu4-cpu-ddr-lat
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat/devfreq/soc:qcom,cpu4-cpu-ddr-lat/min_freq
+
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/io_percent
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/min_freq
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/io_percent
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms
+
+    chown root system /sys/devices/platform/soc/soc:qcom,gpubw
+    chown root system /sys/devices/platform/soc/soc:qcom,gpubw/devfreq
+    chown root system /sys/devices/platform/soc/soc:qcom,gpubw/devfreq/soc:qcom,gpubw
+    chown root system /sys/devices/platform/soc/soc:qcom,gpubw/devfreq/soc:qcom,gpubw/min_freq
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,gpubw
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,gpubw/devfreq
+    chmod 0755 /sys/devices/platform/soc/soc:qcom,gpubw/devfreq/soc:qcom,gpubw
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,gpubw/devfreq/soc:qcom,gpubw/min_freq
+
+    chown root system /sys/devices/platform/soc/5900000.qcom,kgsl-3d0
+    chown root system /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl
+    chown root system /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0
+    chown root system /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq
+    chmod 0755 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0
+    chmod 0755 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl
+    chmod 0755 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0
+    chmod 0755 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq
+    chmod 0664 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq/max_freq
+    chmod 0664 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq/min_freq
+    chmod 0664 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_clk_on
+    chmod 0664 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_rail_on
+    chmod 0664 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/idle_timer
+
+    chown root system /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/min_pwrlevel
+    chmod 0664 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/min_pwrlevel
+    chown root system /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_pwrlevel
+    chmod 0664 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_pwrlevel
+
+    chown root system /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/use_ab
+    chmod 0664 /sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/use_ab

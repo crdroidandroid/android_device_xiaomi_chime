@@ -2,257 +2,258 @@
   "Nodes": [
     {
       "Name": "CPULittleClusterMaxFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq",
-      "Values": [
-        "9999999",
-        "1804800",
-        "1612800",
-        "1420800"
-      ],
-      "DefaultIndex": 0,
+      "Paths": ["/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq"],
+      "Values": ["9999999", "1804800", "1612800", "1420800"],
+      "DefaultIndex": 1,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPULittleClusterMinFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
-      "Values": [
-        "1017600",
-        "864000",
-        "614400",
-        "300000"
-      ],
+      "Paths": ["/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq"],
+      "Values": ["1017600", "864000", "614400", "300000"],
+      "DefaultIndex": 3,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBigClusterMaxFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq",
-      "Values": [
-        "9999999",
-        "2016000",
-        "1804800",
-        "1612800",
-        "1401600"
-      ],
-      "DefaultIndex": 0,
+      "Paths": ["/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq"],
+      "Values": ["9999999", "2016000", "1804800", "1612800", "1401600"],
+      "DefaultIndex": 1,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBigClusterMinFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq",
-      "Values": [
-        "1056000",
-        "1612800",
-        "902400",
-        "652800",
-        "300000"
-      ],
+      "Paths": ["/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq"],
+      "Values": ["1056000", "1612800", "902400", "652800", "300000"],
+      "DefaultIndex": 4,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "GPUMaxFreq",
-      "Path": "/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq/max_freq",
-      "Values": [
-        "999999999",
-        "950000000",
-        "900000000",
-        "820000000",
-        "745000000"
-      ],
+      "Paths": ["/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq/max_freq"],
+      "Values": ["999999999", "950000000", "900000000", "820000000", "745000000"],
       "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "GPUMinFreq",
-      "Path": "/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq/min_freq",
-      "Values": [
-        "600000000",
-        "745000000",
-        "465000000",
-        "320000000"
-      ],
+      "Paths": ["/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/devfreq/min_freq"],
+      "Values": ["600000000", "745000000", "465000000", "320000000"],
+      "DefaultIndex": 3,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "GPUBusMinFreq",
-      "Path": "/sys/devices/platform/soc/soc:qcom,gpubw/devfreq/soc:qcom,gpubw/min_freq",
-      "Values": [
-        "10322",
-        "7759",
-        "5859",
-        "3440",
-        "1525",
-        "0"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,gpubw/devfreq/soc:qcom,gpubw/min_freq"],
+      "Values": ["10322", "7759", "5859", "3440", "1525", "0"],
+      "DefaultIndex": 5,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "GPUForceRailOn",
-      "Path": "/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_rail_on",
-      "Values": [
-        "1",
-        "0"
-      ],
+      "Paths": ["/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_rail_on"],
+      "Values": ["1", "0"],
+      "DefaultIndex": 1,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "GPUForceClkOn",
-      "Path": "/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_clk_on",
-      "Values": [
-        "1",
-        "0"
-      ],
+      "Paths": ["/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_clk_on"],
+      "Values": ["1", "0"],
+      "DefaultIndex": 1,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "GPUIdleTimer",
-      "Path": "/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/idle_timer",
-      "Values": [
-        "80",
-        "64",
-        "58"
-      ],
+      "Paths": ["/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/idle_timer"],
+      "Values": ["80", "64", "58"],
+      "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWHystTriggerCount",
-      "Path": "/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count",
-      "Values": [
-        "3",
-        "5"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count"],
+      "Values": ["3", "5"],
+      "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWHistMemory",
-      "Path": "/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory",
-      "Values": [
-        "20",
-        "30"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory"],
+      "Values": ["20", "30"],
+      "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWHystLength",
-      "Path": "/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length",
-      "Values": [
-        "10",
-        "15"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length"],
+      "Values": ["10", "15"],
+      "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWSampleMs",
-      "Path": "/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms",
-      "Values": [
-        "1",
-        "4",
-        "6"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms"],
+      "Values": ["1", "4", "6"],
+      "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWIOPercent",
-      "Path": "/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/io_percent",
-      "Values": [
-        "90",
-        "50",
-        "30"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/io_percent"],
+      "Values": ["90", "50", "30"],
+      "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "CPUBWMinFreq",
-      "Path": "/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/min_freq",
-      "Values": [
-        "10322",
-        "13763",
-        "7759",
-        "5859",
-        "4173"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq/soc:qcom,cpu-cpu-ddr-bw/min_freq"],
+      "Values": ["10322", "13763", "7759", "5859", "4173"],
+      "DefaultIndex": 4,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "DDRLittleClusterMinFreq",
-      "Path": "/sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq",
-      "Values": [
-        "7759",
-        "5859",
-        "3440",
-        "1525"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-lat/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq"],
+      "Values": ["7759", "5859", "3440", "1525"],
+      "DefaultIndex": 3,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "DDRBigClusterMinFreq",
-      "Path": "/sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat/devfreq/soc:qcom,cpu4-cpu-ddr-lat/min_freq",
-      "Values": [
-        "7759",
-        "5859",
-        "3440",
-        "1525"
-      ],
+      "Paths": ["/sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-lat/devfreq/soc:qcom,cpu4-cpu-ddr-lat/min_freq"],
+      "Values": ["7759", "5859", "3440", "1525"],
+      "DefaultIndex": 3,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "PowerHALMainState",
-      "Path": "vendor.powerhal.state",
-      "Values": [
-        "SUSTAINED_PERFORMANCE",
-        ""
-      ],
+      "Paths": ["vendor.powerhal.state"],
+      "Values": ["SUSTAINED_PERFORMANCE", ""],
+      "DefaultIndex": 1,
       "Type": "Property"
     },
     {
       "Name": "PowerHALRenderingState",
-      "Path": "vendor.powerhal.rendering",
-      "Values": [
-        "EXPENSIVE_RENDERING",
-        ""
-      ],
+      "Paths": ["vendor.powerhal.rendering"],
+      "Values": ["EXPENSIVE_RENDERING", ""],
+      "DefaultIndex": 1,
       "Type": "Property"
     },
     {
       "Name": "DoubleTapToWake",
-      "Path": "/sys/touchpanel/double_tap",
-      "Values": [
-        "0",
-        "1"
-      ],
+      "Paths": ["/sys/touchpanel/double_tap"],
+      "Values": ["0", "1"],
       "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "SchedTuneBoost",
-      "Path": "/dev/stune/top-app/schedtune.boost",
-      "Values": [
-        "0",
-        "5",
-        "7",
-        "10"
-      ],
+      "Paths": ["/dev/stune/top-app/schedtune.boost"],
+      "Values": ["0", "5", "7", "10"],
       "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "SchedTunePreferIdle",
-      "Path": "/dev/stune/top-app/schedtune.prefer_idle",
-      "Values": [
-        "0",
-        "1"
-      ],
+      "Paths": ["/dev/stune/top-app/schedtune.prefer_idle"],
+      "Values": ["0", "1"],
       "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     },
     {
       "Name": "SchedTuneForegroundBoost",
-      "Path": "/dev/stune/foreground/schedtune.boost",
-      "Values": [
-        "0",
-        "3",
-        "5"
-      ],
+      "Paths": ["/dev/stune/foreground/schedtune.boost"],
+      "Values": ["0", "3", "5"],
       "DefaultIndex": 0,
+      "Truncate": true,
+      "HoldFd": false,
+      "WriteOnly": false,
+      "AllowFailure": false,
       "ResetOnInit": true
     }
   ],
@@ -787,4 +788,3 @@
     }
   ]
 }
-

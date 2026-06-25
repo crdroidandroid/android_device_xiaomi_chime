@@ -637,6 +637,8 @@ vendor/lib64/libqtikeymaster4.so
 
 # Listen
 vendor/lib/libsmwrapper.so
+vendor/lib/hw/sound_trigger.primary.bengal.so
+vendor/lib64/hw/sound_trigger.primary.bengal.so
 
 # Listen - devon
 vendor/lib/libadpcmdec.so

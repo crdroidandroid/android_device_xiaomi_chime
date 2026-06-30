@@ -1,7 +1,7 @@
 # Audio
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
-aaudio.mmap_policy=2
+aaudio.mmap_policy=1
 audio.offload.gapless.enabled=true
 av.offload.enable=true
 persist.audio.fluence.speaker=true
@@ -19,11 +19,10 @@ persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
-ro.qc.sdk.audio.fluencetype=fluence
-ro.qc.sdk.audio.ssr=false
-ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.fluencetype=none
+ro.qc.sdk.audio.fluencetype=none
 ro.vendor.audio.sdk.ssr=false
-tunnel.audio.encode=true
+ro.qc.sdk.audio.ssr=false
 use.voice.path.for.pcm.voip=true
 vendor.audio.adm.buffering.ms=2
 vendor.audio.enable.mirrorlink=false
@@ -69,7 +68,6 @@ vendor.audio.feature.usb_offload_burst_mode.enable=true
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false
 vendor.audio.feature.vbat.enable=true
 vendor.audio.feature.wsa.enable=false
-vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio.hal.output.suspend.supported=true
 vendor.audio.hw.aac.encoder=true
@@ -90,6 +88,22 @@ vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
+audio.deep_buffer.media=true
+audio.service.client_wait_ms=10000
+persist.vendor.audio.button_jack.profile=volume
+persist.vendor.audio.button_jack.switch=0
+ro.vendor.audio.misound.bluetooth.enable=true
+ro.vendor.audio.scenario.support=false
+ro.vendor.audio.sfx.earadj=true
+ro.vendor.audio.sfx.scenario=false
+ro.vendor.audio.sos=true
+ro.vendor.audio.soundfx.type=mi
+ro.vendor.audio.soundfx.usb=true
+ro.vendor.audio.spk.clean=true
+ro.vendor.audio.surround.support=false
+ro.vendor.audio.vocal.support=false
+ro.vendor.audio.voice.change.support=true
+ro.vendor.audio.voice.volume.boost=none
 
 # Bluetooth
 persist.bluetooth.a2dp_offload.disabled=false
@@ -255,23 +269,6 @@ persist.data.df.agg.dl_size=4096
 persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
-
-# Soundtrigger
-ro.vendor.audio.soundtrigger.appdefine.gmm.level=55
-ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=50
-ro.vendor.audio.soundtrigger.appdefine.cnn.level=31
-ro.vendor.audio.soundtrigger.appdefine.vop.level=10
-ro.vendor.audio.soundtrigger.lowpower=true
-ro.vendor.audio.soundtrigger.training.level=50
-ro.vendor.audio.soundtrigger.xanzn.gmm.level=45
-ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=30
-ro.vendor.audio.soundtrigger.xanzn.cnn.level=70
-ro.vendor.audio.soundtrigger.xanzn.vop.level=10
-ro.vendor.audio.soundtrigger.xatx.gmm.level=50
-ro.vendor.audio.soundtrigger.xatx.gmm.user.level=40
-ro.vendor.audio.soundtrigger.xatx.cnn.level=27
-ro.vendor.audio.soundtrigger.xatx.vop.level=10
-ro.vendor.audio.soundtrigger=sva
 
 # System
 persist.sys.binary_xml=false
